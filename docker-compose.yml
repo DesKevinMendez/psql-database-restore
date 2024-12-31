@@ -1,0 +1,13 @@
+services:
+  postgres:
+    build: .
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: prod-my-database
+      DUMP_PATH: /dumps/prod-my-database.dump
+    ports:
+      - "5440:5432"
+    volumes:
+      - ./dumps:/dumps
+      - ./init.sh:/docker-entrypoint-initdb.d/init.sh 

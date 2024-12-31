@@ -1,0 +1,33 @@
+# Dumps de base de datos
+*.dump
+*.sql
+*.backup
+dumps/*
+!dumps/.gitkeep
+
+# Archivos de Docker
+.env
+docker-compose.override.yml
+
+# Logs
+*.log
+
+# Directorios de datos de PostgreSQL
+data/
+pgdata/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# IDEs y editores
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Archivos temporales
+*.tmp
+*.temp
+.env.local 
